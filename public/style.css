@@ -1,0 +1,106 @@
+body{
+    background-color: aquamarine;
+    margin: 0;
+}
+
+form{
+    justify-self: center;
+    text-align: center;
+    height: fit-content;
+}
+
+h2{
+    justify-self: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.box{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 10px;
+    height: fit-content;
+    /* z-index: 1; */
+}
+
+.creatorName{
+    /* height: 90px; */
+    width: 300px; 
+    /* border: 0.5px solid blue; */
+    justify-self: center;
+    text-align: center;
+    height: fit-content;
+} 
+
+.forms-container {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    margin-top: 50px;
+}
+
+.newBookAdd,
+.bookupdate {
+    text-align: center;
+}
+
+.newBookAdd input[type="submit"],
+.bookupdate input[type="submit"] {
+    background-color: #9b2d30; /* Gryffindor Red */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.newBookAdd input[type="submit"]:hover,
+.bookupdate input[type="submit"]:hover {
+    background-color: #6d1519; /* Darker Gryffindor Red */
+}
+
+
+.notes{
+    font-weight: lighter;
+    font-size: smaller;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Increase padding for a larger button */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Increase font size for better visibility */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"]{
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 18px; /* Increase font size for better visibility */
+}
+
+
+.trial {
+    border: none;
+    background: none;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    outline: none;
+    cursor: text;
+}

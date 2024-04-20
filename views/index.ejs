@@ -1,0 +1,38 @@
+<%- include('partials/header.ejs'); -%>
+
+
+
+<div class="box">
+    <div class="creatorName">
+        <h1>Kartikey Dixit</h1>
+    </div>
+    <form class="newBookAdd" action="/addbook" method="post">
+            <input type="submit" name="add" value="Add Book" >
+    </form>
+
+    <form class="bookupdate" action="/updatebook" method="post">
+        <h3>Enter Book name</h3>
+        <input type="text" name="bookname"> 
+        <button type="submit">Search</button> 
+    </form>
+    <% for(let book of bookList){ %>
+        <h2>
+            <p><%= book.id %>. <%= book.bookname %></p>
+            <p> Author: <%= book.bookauthor %></p>
+            <p> Read in the year: <%= book.readyear %></p>
+            <p class="notes">Here are some of the points i liked about this book: <br> <%= book.points %>
+            <p class="notes">Here is my rating of the book: <%= book.rating %></p>
+        </h2>
+    <% } %>
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer.ejs'); -%>

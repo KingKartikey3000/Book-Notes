@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="box">
+        <h1 class="creatorName">Add a Book</h1>
+        <form action="/new" method="post">
+            <p>Enter Book Name</p>
+            <input type="text" name="bookname">
+            <p>Enter Book Author</p>
+            <input type="text" name="bookauthor">
+            <p>Enter Read Year</p>
+            <input type="text" name="readyear">
+            <p>Enter Points</p>
+            <input type="text" name="notes">
+            <p>Rate book between 0-5</p>
+            <input type="number" name="rating" min="0" max="5">
+            <h3></h3>
+            <div class="spacer"></div>
+            <button type="submit">Add</button>
+        </form>
+</div>
+
+<%- include('partials/footer.ejs'); -%>
+
+
+
+
+
+<%- include('partials/footer.ejs'); -%>

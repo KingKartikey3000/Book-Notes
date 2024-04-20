@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="box">
+    <h1 class="creatorName">Update Book Notes Here</h1>
+
+
+    <% for(let book of bookList){ %>
+        <div class="book">
+            <input type="hidden" name="updatedBookId" value="<%= book.id %>">
+            <!-- <input id="input<%=book.id%>" type="text" name="updatedItemTitle" value="<%= book.id %>" autocomplete="off" -->
+            <!-- autofocus="true"/> -->
+            <form action="/update" method="post">
+                <h3> Book Name: <%= book.bookname %></h3>
+                <h3> Author: <%= book.bookauthor %></h3>
+                <h3> Read in the year: <%= book.readyear %></h3>
+                <h3 class="notes">Here are some of the points I liked about this book: <br> <%= book.points %></h3>
+                <h3 class="notes">Here is my rating of the book: <%= book.rating %></h3>
+
+                <p>
+                    <form id="editForm<%= book.id %>" class="edit" action="/edit" method="post" style="display: none;">
+                        <input type="hidden" name="updatedItemId" value="<%= book.id %>">
+                        <input class="trial" id="input<%= book.id %>" type="text" name="updatedItemTitle" placeholder="Enter new Notes Here"  autocomplete="off" autofocus="true">
+                        <button id="done<%= book.id %>" class="edit" type="submit">Save</button>
+                    </form>   
+                </p>
+            </form>
+
+        </div>
+    <% } %>
+    
+
+</div>
+
+
+<%- include('partials/footer.ejs'); -%>
